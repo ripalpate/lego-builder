@@ -7,5 +7,6 @@ const initializeApp = () => {
   initializePartView.initializeHeadView();
   initializePartView.initializeTorsoView();
   initializePartView.initializeLegsView();
+  initializePartView.x();
 };
 initializeApp();

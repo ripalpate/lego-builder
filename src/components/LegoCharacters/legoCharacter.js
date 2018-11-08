@@ -2,6 +2,8 @@ import $ from 'jquery';
 import 'bootstrap';
 import printParts from '../../data/partsData';
 
+let headClickCount = 1;
+
 const creatPartsList = (part, divID) => {
   let domString = '';
   domString += `<div id="${part.id}"class="part-card">
@@ -34,14 +36,37 @@ const initializeLegsView = () => {
   });
 };
 
-const clickedImage = () => {
-  $('#lego-parts').on('click', (e) => {
-    const partIClicked = $(e.target).closest('.part-card').attr('id');
-    console.log(partIClicked);
-    // printParts.anotherX(partIClicked);
+const incrementClick = (allHeads) => {
+  headClickCount += headClickCount + 1;
+  console.log(headClickCount);
+  if (headClickCount === allHeads.length) {
+    headClickCount = 0;
+  }
+};
+
+// const clickedImage = () => {
+//   $('#lego-parts').on('click', (e) => {
+//     const partIClicked = $(e.target).closest('.part-card').attr('id');
+//     console.log(partIClicked);
+//     // printParts.anotherX(partIClicked);
+//   });
+// };
+
+const clickHead = (allHeads) => {
+  $('#lego-head').on('click', () => {
+    console.log(allHeads[headClickCount]);
+    creatPartsList(allHeads[headClickCount], '#lego-head');
+    incrementClick(allHeads);
   });
 };
 
-clickedImage();
 
-export default { initializeHeadView, initializeTorsoView, initializeLegsView };
+const x = () => {
+  printParts.anotherX().then((allHeads) => {
+    clickHead(allHeads);
+  });
+};
+
+export default {
+  initializeHeadView, initializeTorsoView, initializeLegsView, x,
+};
