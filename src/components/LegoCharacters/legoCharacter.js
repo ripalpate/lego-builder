@@ -33,4 +33,14 @@ const initializeLegsView = () => {
     console.error(error);
   });
 };
+
+const clickedImage = (divID) => {
+  $(divID).on('click', (e) => {
+    const headIClicked = $(e.target).closest('#lego-head').attr('id');
+    printParts.anotherX(headIClicked);
+  });
+};
+
+clickedImage();
+
 export default { initializeHeadView, initializeTorsoView, initializeLegsView };
