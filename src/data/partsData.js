@@ -33,4 +33,26 @@ const getLegs = () => new Promise((resolve, reject) => {
       reject(error);
     });
 });
+
+// const anotherX = (headId) => {
+//   const y = new Promise((resolve, reject) => {
+//     axios.get('http://localhost:3001/heads')
+//       .then((data) => {
+//         const allHeads = data.data;
+//         let parseId = allHeads.substring(1, allHeads.length - 1);
+//         parseId+1;
+//         if (parseId === 9) { parseId = 1; }
+//         const newId = 'head' + parseId;
+//         const headFilter = allHeads.filter(head => head.id === newId);
+//         console.log(headFilter);
+
+//         resolve(allHeads);
+//       }).catch((error) => {
+//         reject(error);
+//       });
+//   });
+//   return y;
+// };
+
+
 export default { getHeads, getTorsos, getLegs };

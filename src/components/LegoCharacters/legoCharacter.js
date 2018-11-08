@@ -4,7 +4,7 @@ import printParts from '../../data/partsData';
 
 const creatPartsList = (part, divID) => {
   let domString = '';
-  domString += `<div class="head-card">
+  domString += `<div id="${part.id}"class="part-card">
                     <img src=${part.imageUrl} width="250px">
                     <h4>${part.name}</h4>`;
   $(divID).html(domString);
@@ -34,10 +34,11 @@ const initializeLegsView = () => {
   });
 };
 
-const clickedImage = (divID) => {
-  $(divID).on('click', (e) => {
-    const headIClicked = $(e.target).closest('#lego-head').attr('id');
-    printParts.anotherX(headIClicked);
+const clickedImage = () => {
+  $('#lego-parts').on('click', (e) => {
+    const partIClicked = $(e.target).closest('.part-card').attr('id');
+    console.log(partIClicked);
+    // printParts.anotherX(partIClicked);
   });
 };
 
