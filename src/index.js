@@ -1,5 +1,11 @@
 // import $ from 'jquery';
 import 'bootstrap';
 import './index.scss';
+import initializePartView from './components/LegoCharacters/legoCharacter';
 
-console.log('hi');
+const initializeApp = () => {
+  initializePartView.initializeHeadView();
+  initializePartView.initializeTorsoView();
+  initializePartView.initializeLegsView();
+};
+initializeApp();
