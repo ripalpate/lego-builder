@@ -1,17 +1,16 @@
 import $ from 'jquery';
 import printParts from '../data/partsData';
 import initializePartView from '../components/LegoCharacters/legoCharacter';
+import printLegos from '../components/SavedCharacters/savedCharacters';
 
 let headClickCount = 0;
 const onHeadClickView = () => {
   printParts.getterHeadData().then((headsObject) => {
     $('#lego-head').on('click', () => {
       headClickCount += 1;
-      console.log(headClickCount);
       if (headClickCount === headsObject.length) {
         headClickCount = 0;
       }
-      console.log(headsObject[headClickCount]);
       initializePartView.creatPartsList(headsObject[headClickCount], '#lego-head');
     });
   });
@@ -21,11 +20,9 @@ const onTorsosClickView = () => {
   printParts.getterTorsosData().then((torsosObject) => {
     $('#lego-torso').on('click', () => {
       torsoClickCount += 1;
-      console.log(torsoClickCount);
       if (torsoClickCount === torsosObject.length) {
         torsoClickCount = 0;
       }
-      console.log(torsosObject[torsoClickCount]);
       initializePartView.creatPartsList(torsosObject[torsoClickCount], '#lego-torso');
     });
   });
@@ -36,13 +33,31 @@ const onClickLegsView = () => {
   printParts.getterLegsData().then((legsObject) => {
     $('#lego-legs').on('click', () => {
       legsClickCount += 1;
-      console.log(legsClickCount);
       if (legsClickCount === legsObject.length) {
         legsClickCount = 0;
       }
-      console.log(legsObject[legsClickCount]);
       initializePartView.creatPartsList(legsObject[legsClickCount], '#lego-legs');
     });
   });
 };
-export default { onHeadClickView, onTorsosClickView, onClickLegsView };
+
+const savedLegoArray = [];
+const savedLegos = () => {
+  $('#save-button').click(() => {
+    const name = $('#lego-head').text() + $('#lego-torso').text() + $('#lego-legs').text();
+    console.log(name);
+    const headImage = $('#lego-head').find('img').attr('src');
+    console.log(headImage);
+    const torsoImage = $('#lego-torso').find('img').attr('src');
+    const legsImage = $('#lego-legs').find('img').attr('src');
+    savedLegoArray.push(name, headImage, torsoImage, legsImage);
+  });
+  printLegos.printSavedLegos(savedLegoArray);
+};
+
+export default {
+  onHeadClickView,
+  onTorsosClickView,
+  onClickLegsView,
+  savedLegos,
+};

@@ -1,9 +1,18 @@
 import $ from 'jquery';
 import 'bootstrap';
 
-const saveLego = () => {
-  $('#save-button').click(() => {
-    console.log('iclick');
+const printSavedLegos = (savedLegos) => {
+  let domString = '';
+  savedLegos.forEach((savedLego) => {
+    domString += `<div id="savedLego" >
+                    <p>${savedLego.name}</p>
+                    <img src="${savedLego.headImage}">
+                    <img src="${savedLego.torsoImage}">
+                    <img src="${savedLego.legsImage}">
+                  </div>`;
   });
+  $('#buildLego').html(domString);
 };
-saveLego();
+
+
+export default { printSavedLegos };
