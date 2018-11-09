@@ -2,11 +2,14 @@
 import 'bootstrap';
 import './index.scss';
 import initializePartView from './components/LegoCharacters/legoCharacter';
+import events from './helpers/events';
 
 const initializeApp = () => {
   initializePartView.initializeHeadView();
   initializePartView.initializeTorsoView();
   initializePartView.initializeLegsView();
-  initializePartView.x();
+  events.onHeadClickView();
+  events.onTorsosClickView();
+  events.onClickLegsView();
 };
 initializeApp();

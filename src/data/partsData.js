@@ -35,28 +35,39 @@ const getLegs = () => new Promise((resolve, reject) => {
 });
 
 
-const anotherX = () => {
-  const y = new Promise((resolve, reject) => {
-    axios.get('http://localhost:3001/heads')
-      .then((data) => {
-        const allHeads = data.data;
-        console.log(allHeads);
+const getterHeadData = () => new Promise((resolve, reject) => {
+  axios.get('http://localhost:3001/heads')
+    .then((data) => {
+      const headsObject = data.data;
+      console.log(headsObject);
+      resolve(headsObject);
+    }).catch((error) => {
+      reject(error);
+    });
+});
 
-        // const parseId = headId.substring(3);
-        // console.log(parseId);
-        // if (parseId === 9) { parseId = 1; }
-        // const newId = 'head' + parseId;
-        // const headFilter = allHeads.filter(head => head.id === newId);
-        // console.log(headFilter);
+const getterTorsosData = () => new Promise((resolve, reject) => {
+  axios.get('http://localhost:3001/torsos')
+    .then((data) => {
+      const torsosObject = data.data;
+      console.log(torsosObject);
+      resolve(torsosObject);
+    }).catch((error) => {
+      reject(error);
+    });
+});
 
-        resolve(allHeads);
-      }).catch((error) => {
-        reject(error);
-      });
-  });
-  return y;
-};
+const getterLegsData = () => new Promise((resolve, reject) => {
+  axios.get('http://localhost:3001/legs')
+    .then((data) => {
+      const legsObject = data.data;
+      console.log(legsObject);
+      resolve(legsObject);
+    }).catch((error) => {
+      reject(error);
+    });
+});
 
 export default {
-  getHeads, getTorsos, getLegs, anotherX,
+  getHeads, getTorsos, getLegs, getterHeadData, getterTorsosData, getterLegsData,
 };
