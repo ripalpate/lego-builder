@@ -4,7 +4,7 @@ import printParts from '../../data/partsData';
 
 const creatPartsList = (part, divID) => {
   let domString = '';
-  domString += `<div class="head-card">
+  domString += `<div id="${part.id}"class="part-card">
                     <img src=${part.imageUrl} width="250px">
                     <h4>${part.name}</h4>`;
   $(divID).html(domString);
@@ -33,4 +33,10 @@ const initializeLegsView = () => {
     console.error(error);
   });
 };
-export default { initializeHeadView, initializeTorsoView, initializeLegsView };
+
+export default {
+  initializeHeadView,
+  initializeTorsoView,
+  initializeLegsView,
+  creatPartsList,
+};
