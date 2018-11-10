@@ -41,18 +41,23 @@ const onClickLegsView = () => {
   });
 };
 
-const savedLegoArray = [];
+const savedLegosArray = [];
 const savedLegos = () => {
   $('#save-button').click(() => {
-    const name = $('#lego-head').text() + $('#lego-torso').text() + $('#lego-legs').text();
-    console.log(name);
+    const name = $('#lego-head').text().trim() + $('#lego-torso').text().trim() + $('#lego-legs').text().trim();
+    // console.log(name);
     const headImage = $('#lego-head').find('img').attr('src');
-    console.log(headImage);
+    // console.log(headImage);
     const torsoImage = $('#lego-torso').find('img').attr('src');
     const legsImage = $('#lego-legs').find('img').attr('src');
-    savedLegoArray.push(name, headImage, torsoImage, legsImage);
+    const lego = {
+      name, headImage, torsoImage, legsImage,
+    };
+    savedLegosArray.push(lego);
+    console.log(savedLegosArray);
+
+    printLegos.printSavedLegos(savedLegosArray);
   });
-  printLegos.printSavedLegos(savedLegoArray);
 };
 
 export default {

@@ -11,6 +11,6 @@ const initializeApp = () => {
   events.onHeadClickView();
   events.onTorsosClickView();
   events.onClickLegsView();
-  events.saveLego();
+  events.savedLegos();
 };
 initializeApp();
