@@ -39,7 +39,6 @@ const getterHeadData = () => new Promise((resolve, reject) => {
   axios.get('http://localhost:3001/heads')
     .then((data) => {
       const headsObject = data.data;
-      console.log(headsObject);
       resolve(headsObject);
     }).catch((error) => {
       reject(error);
@@ -50,7 +49,6 @@ const getterTorsosData = () => new Promise((resolve, reject) => {
   axios.get('http://localhost:3001/torsos')
     .then((data) => {
       const torsosObject = data.data;
-      console.log(torsosObject);
       resolve(torsosObject);
     }).catch((error) => {
       reject(error);
@@ -61,7 +59,6 @@ const getterLegsData = () => new Promise((resolve, reject) => {
   axios.get('http://localhost:3001/legs')
     .then((data) => {
       const legsObject = data.data;
-      console.log(legsObject);
       resolve(legsObject);
     }).catch((error) => {
       reject(error);

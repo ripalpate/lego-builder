@@ -40,9 +40,21 @@ const initializeLegsView = () => {
 const selectedHeadView = () => {
   printParts.getterHeadData().then((data) => {
     $('#select-head').change(() => {
-      const selectedHead = $('option:selected').val();
+      const selectedHead = $('.head:selected').val();
       const headFilter = data.filter(x => x.name === selectedHead);
       creatPartsList(headFilter[0], '#lego-head');
+    });
+  }).catch((error) => {
+    console.error(error);
+  });
+};
+
+const selectedTorsoView = () => {
+  printParts.getterTorsosData().then((data) => {
+    $('#select-torso').change(() => {
+      const selectedTorso = $('.torso:selected').val();
+      const torsoFilter = data.filter(x => x.name === selectedTorso);
+      creatPartsList(torsoFilter[0], '#lego-torso');
     });
   }).catch((error) => {
     console.error(error);
@@ -55,4 +67,5 @@ export default {
   initializeLegsView,
   creatPartsList,
   selectedHeadView,
+  selectedTorsoView,
 };
