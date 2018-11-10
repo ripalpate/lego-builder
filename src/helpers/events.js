@@ -54,8 +54,6 @@ const savedLegos = () => {
       name, headImage, torsoImage, legsImage,
     };
     savedLegosArray.push(lego);
-    console.log(savedLegosArray);
-
     printLegos.printSavedLegos(savedLegosArray);
   });
 };

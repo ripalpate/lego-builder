@@ -61,6 +61,17 @@ const selectedTorsoView = () => {
   });
 };
 
+const selectedLegsView = () => {
+  printParts.getterLegsData().then((data) => {
+    $('#select-legs').change(() => {
+      const selectedLegs = $('.legs:selected').val();
+      const legsFilter = data.filter(x => x.name === selectedLegs);
+      creatPartsList(legsFilter[0], '#lego-legs');
+    });
+  }).catch((error) => {
+    console.error(error);
+  });
+};
 export default {
   initializeHeadView,
   initializeTorsoView,
@@ -68,4 +79,5 @@ export default {
   creatPartsList,
   selectedHeadView,
   selectedTorsoView,
+  selectedLegsView,
 };
