@@ -37,9 +37,22 @@ const initializeLegsView = () => {
   });
 };
 
+const selectedHeadView = () => {
+  printParts.getterHeadData().then((data) => {
+    $('#select-head').change(() => {
+      const selectedHead = $('option:selected').val();
+      const headFilter = data.filter(x => x.name === selectedHead);
+      creatPartsList(headFilter[0], '#lego-head');
+    });
+  }).catch((error) => {
+    console.error(error);
+  });
+};
+
 export default {
   initializeHeadView,
   initializeTorsoView,
   initializeLegsView,
   creatPartsList,
+  selectedHeadView,
 };

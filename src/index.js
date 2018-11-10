@@ -8,6 +8,7 @@ const initializeApp = () => {
   initializePartView.initializeHeadView();
   initializePartView.initializeTorsoView();
   initializePartView.initializeLegsView();
+  initializePartView.selectedHeadView();
   events.onHeadClickView();
   events.onTorsosClickView();
   events.onClickLegsView();
