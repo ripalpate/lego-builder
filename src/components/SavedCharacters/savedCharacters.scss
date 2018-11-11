@@ -1,1 +1,13 @@
-@import "~bootstrap/scss/bootstrap";
+// @import "~bootstrap/scss/bootstrap";
+@import "../../styles/variables";
+
+#buildLego {
+  @include display();
+  justify-content: center;
+  flex-wrap: wrap;
+  @include default-font(1.5em);
+}
+
+#buildLego > div {
+  margin: 10px;
+}

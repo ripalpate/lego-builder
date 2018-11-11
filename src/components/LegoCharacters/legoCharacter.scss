@@ -1,1 +1,20 @@
-@import "~bootstrap/scss/bootstrap";
+@import "../../styles/variables";
+
+#lego-parts{
+  width:20%;
+  margin: auto;
+
+  #lego-head, #lego-torso, #lego-legs{
+    width:40%;
+
+    .part-card{
+      @include default-font(20px);
+      display: flex;
+      flex-direction: row;
+    }
+      #name-div{
+        margin: auto;
+        padding: 30px;
+      }
+  }
+}

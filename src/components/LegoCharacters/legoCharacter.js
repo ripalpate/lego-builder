@@ -1,12 +1,14 @@
 import $ from 'jquery';
 import 'bootstrap';
+import './legoCharacter.scss';
 import printParts from '../../data/partsData';
+
 
 const creatPartsList = (part, divID) => {
   let domString = '';
   domString += `<div id="${part.id} lego-image"class="part-card">
                   <div class="image-div">
-                    <img src=${part.imageUrl} width="250px">
+                    <img src=${part.imageUrl} width="250px" height="200px;">
                   </div>
                   <div id="name-div">
                     <h4>${part.name}</h4>

@@ -9,55 +9,57 @@
   <div class="header">
     <h1>Lego Builder</h1>
   </div>
-  <nav class="dropdown-navs">
-    <img src="https://www.techknowhowkids.com/img/lego_man_torso.png" alt="blocks" width="50px">
-    <form class="form-inline">
-      <select class="custom-select" id="select-head">
-        <option selected>Select Heads' Name</option>
-        <option value="ast" class="head">Ast</option>
-        <option value="min" class="head">Min</option>
-        <option value="storm" class="head">Storm</option>
-        <option value="pi" class="head">Pi</option>
-        <option value="ge" class="head">Ge</option>
-        <option value="imp" class="head">Imp</option>
-        <option value="pat" class="head">Pat</option>
-        <option value="wonder" class="head">Wonder</option>
-      </select>
-    </form>
-    <form class="form-inline">
-      <select class="custom-select" id="select-torso">
-        <option>Select Torsos' Name</option>
-        <option value="ron" class="torso">Ron</option>
-        <option value="ot" class="torso">Ot</option>
-        <option value="troo" class="torso">Troo</option>
-        <option value="rat" class="torso">Rat</option>
-        <option value="ni" class="torso">Ni</option>
-        <option value="erial" class="torso">Erial</option>
-        <option value="ri" class="torso">Ri</option>
-        <option value="wo" class="torso">Wo</option>
-      </select>
-    </form>
-    <form class="form-inline">
-      <select class="custom-select" id="select-legs">
-          <option>Select Legs' Name</option>
-          <option value="aut" class="legs">Aut</option>
-          <option value="aur" class="legs">Aur</option>
-          <option value="per" class="legs">Per</option>
-          <option value="e" class="legs">E</option>
-          <option value="e" class="legs">E</option>
-          <option value="guard" class="legs">Guard</option>
-          <option value="ck" class="legs">Ck</option>
-          <option value="man" class="legs">Man</option>
+  <nav class="nav-wrapper">
+    <img src="https://i0.wp.com/www.scottbarrykaufman.com/wp-content/uploads/2013/10/Lego-Logo.png?ssl=1" alt="blocks" width="75px" height="50px">
+    <div class="dropdown-navs">
+      <form class="form-inline">
+        <select class="custom-select" id="select-head">
+          <option selected>Select Head</option>
+          <option value="ast" class="head">Ast</option>
+          <option value="min" class="head">Min</option>
+          <option value="storm" class="head">Storm</option>
+          <option value="pi" class="head">Pi</option>
+          <option value="ge" class="head">Ge</option>
+          <option value="imp" class="head">Imp</option>
+          <option value="pat" class="head">Pat</option>
+          <option value="wonder" class="head">Wonder</option>
         </select>
-    </form>  
+      </form>
+      <form class="form-inline">
+        <select class="custom-select" id="select-torso">
+          <option>Select Torso</option>
+          <option value="ron" class="torso">Ron</option>
+          <option value="ot" class="torso">Ot</option>
+          <option value="troo" class="torso">Troo</option>
+          <option value="rat" class="torso">Rat</option>
+          <option value="ni" class="torso">Ni</option>
+          <option value="erial" class="torso">Erial</option>
+          <option value="ri" class="torso">Ri</option>
+          <option value="wo" class="torso">Wo</option>
+        </select>
+      </form>
+      <form class="form-inline">
+        <select class="custom-select" id="select-legs">
+            <option>Select Leg</option>
+            <option value="aut" class="legs">Aut</option>
+            <option value="aur" class="legs">Aur</option>
+            <option value="per" class="legs">Per</option>
+            <option value="e" class="legs">E</option>
+            <option value="e" class="legs">E</option>
+            <option value="guard" class="legs">Guard</option>
+            <option value="ck" class="legs">Ck</option>
+            <option value="man" class="legs">Man</option>
+          </select>
+      </form>  
+    </div>
   </nav>  
   <div id="lego-parts">
     <div id="lego-head"></div>
     <div id="lego-torso"></div>
     <div id="lego-legs"></div>
   </div>
-  <div>
-    <button class="btn btn-secondary" id="save-button">Save Build Lego</button>
+  <div class="save-button">
+    <button class="btn btn-info" id="save-button">Save Build Lego</button>
   </div>
   <div id="buildLego"></div>
 </body>
