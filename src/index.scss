@@ -15,14 +15,18 @@ body {
       box-shadow: $box-shadow;
     }
 }
-// .dropdown-navs{
-//   @include display(); 
-// }
+
 .save-button{
-  text-align: center;
+  text-align: $textAlign;
   margin: 20px;
 }
 
+.heading-name {
+  font-family: $blackopsFont;
+  font-size: 3.5em;
+  text-align: $textAlign;
+  margin: 20px;
+}
 .custom-select {
   background-image: none;
 }
