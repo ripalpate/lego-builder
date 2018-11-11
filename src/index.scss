@@ -1,5 +1,32 @@
 @import "~bootstrap/scss/bootstrap";
+@import "./styles/variables";
 
 body {
-  background-color: plum;
+  background-image:$grayLinen;
+} 
+.nav-wrapper{
+  @include display();  
+  justify-content: space-between;
+    .dropdown-navs{
+      @include display(); 
+    }
+    .form-inline{
+      margin: 10px;
+      box-shadow: $box-shadow;
+    }
+}
+
+.save-button{
+  text-align: $textAlign;
+  margin: 20px;
+}
+
+.heading-name {
+  font-family: $blackopsFont;
+  font-size: 3.5em;
+  text-align: $textAlign;
+  margin: 20px;
+}
+.custom-select {
+  background-image: none;
 }

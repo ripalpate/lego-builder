@@ -55,6 +55,7 @@ const savedLegos = () => {
     };
     savedLegosArray.push(lego);
     printLegos.printSavedLegos(savedLegosArray);
+    $('#select-head, #select-torso, #select-legs').prop('selectedIndex', 0);
   });
 };
 
