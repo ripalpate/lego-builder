@@ -1,0 +1,15 @@
+$grayLinen:url('http://spime.media/wp-content/uploads/2016/01/LightGrey-linen.png');
+
+@mixin default-font ($fontsize) {
+  font-size: $fontsize;
+  color: black;
+  text-align: center;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  font-family: 'Arial';
+}
+@mixin display() {
+  display:flex;
+  flex-direction: row;
+}

@@ -5,10 +5,12 @@ import printParts from '../../data/partsData';
 const creatPartsList = (part, divID) => {
   let domString = '';
   domString += `<div id="${part.id} lego-image"class="part-card">
+                  <div class="image-div">
                     <img src=${part.imageUrl} width="250px">
-                </div>
-                <div id="name-div">
+                  </div>
+                  <div id="name-div">
                     <h4>${part.name}</h4>
+                  </div>
                 </div>`;
   $(divID).html(domString);
 };

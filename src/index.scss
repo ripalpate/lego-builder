@@ -1,5 +1,22 @@
 @import "~bootstrap/scss/bootstrap";
-
+@import "./styles/variables";
 body {
-  background-color: plum;
+  background-image:$grayLinen;
+} 
+// #lego-parts{
+//   @include display();
+//   justify-content: center;
+// }
+#lego-parts{
+  width:25%;
+  margin: auto;
+
+  #lego-head, #lego-torso, #lego-legs{
+    width:30%;
+    
+    .part-card{
+      @include default-font(20px);
+      @include display();
+    }
+  }
 }
