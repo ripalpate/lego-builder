@@ -18,9 +18,12 @@ body {
 
 .save-button{
   text-align: $textAlign;
-  margin: 20px;
+  margin: 30px;
 }
-
+.btn {
+  box-shadow: $box-shadow;
+  width: 30%;
+}
 .heading-name {
   font-family: $blackopsFont;
   font-size: 3.5em;
