@@ -1,10 +1,10 @@
-$grayLinen:url('http://spime.media/wp-content/uploads/2016/01/LightGrey-linen.png');
+$grayLinen:url('./images/background.png');
 $box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
 $textAlign: center;
 
+// Google Fonts
 @import url(https://fonts.googleapis.com/css?family=Black+Ops+One);
 $blackopsFont : 'Black Ops One', cursive;
-
 
 @mixin default-font ($fontsize) {
   font-size: $fontsize;
@@ -15,6 +15,7 @@ $blackopsFont : 'Black Ops One', cursive;
   vertical-align: middle;
   font-family: 'Arial';
 }
+
 @mixin display() {
   display:flex;
   flex-direction: row;
