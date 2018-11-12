@@ -3,7 +3,7 @@
 ### Description
 This project is an exploration of ES6 Modules, Axios, and SASS styling by creating a Lego Builder. Once loaded the user has the ability to build their own lego characters by either clicking on images or by selecting from dropdowns and the ability to save the lego creations.
 
-![mainview](./screenshots/)
+![mainview](./screenshots/lego-builder.png)
 
 ### Technologies Used
 * SASS

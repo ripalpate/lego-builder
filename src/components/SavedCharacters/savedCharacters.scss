@@ -2,12 +2,15 @@
 @import "../../styles/variables";
 
 #buildLego {
+  @include default-font(1.5em);
   @include display();
   justify-content: center;
   flex-wrap: wrap;
-  @include default-font(1.5em);
 }
 
 #buildLego > div {
   margin: 10px;
+  background-color: white;
+  padding:10px;
+  box-shadow: $box-shadow;
 }
